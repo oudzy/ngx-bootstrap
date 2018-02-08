@@ -939,6 +939,11 @@ export const ngdoc: any = {
         "description": "<p>default date to show if <code>ng-model</code> value is not specified </p>\n"
       },
       {
+        "name": "locale",
+        "type": "string",
+        "description": ""
+      },
+      {
         "name": "maxDate",
         "type": "Date",
         "description": "<p>latest selectable date </p>\n"

@@ -8,6 +8,7 @@
     "typedoc": "typedoc --exclude '**/*.spec.ts' ./src/",
     "demo.docs": "node scripts/docs/get-doc.js",
     "demo.serve": "run-s build link demo.docs demo.build docs.archive lite-server",
+    "demo.serve1": "run-s build link demo.build-fast lite-server",
     "demo.serve-fast": "run-s build link demo.docs demo.build-fast docs.archive lite-server",
     "demo.gh-pages": "run-s build demo.docs demo.build docs.archive demo.deploy",
     "demo.build": "ng build -prod --aot --build-optimizer && npm run generate-bs4",

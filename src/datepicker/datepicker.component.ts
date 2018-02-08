@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, ViewChild, forwardRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild, forwardRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DatePickerInnerComponent } from './datepicker-inner.component';
 import { DatepickerConfig } from './datepicker.config';
@@ -47,7 +47,7 @@ export const DATEPICKER_CONTROL_VALUE_ACCESSOR: any = {
   providers: [DATEPICKER_CONTROL_VALUE_ACCESSOR]
 })
 /* tslint:enable:component-selector-name component-selector-type */
-export class DatePickerComponent implements ControlValueAccessor {
+export class DatePickerComponent implements ControlValueAccessor, OnInit {
   /** sets datepicker mode, supports: `day`, `month`, `year` */
   @Input() public datepickerMode: string = 'day';
   /** default date to show if `ng-model` value is not specified */
@@ -97,6 +97,9 @@ export class DatePickerComponent implements ControlValueAccessor {
     return this._activeDate || this._now;
   }
 
+  @Input()
+  public locale: string;
+
   public set activeDate(value: Date) {
     this._activeDate = value;
   }
@@ -120,6 +123,12 @@ export class DatePickerComponent implements ControlValueAccessor {
   public constructor(config: DatepickerConfig) {
     this.config = config;
     this.configureOptions();
+  }
+
+  public ngOnInit(): void {
+    if(this.locale) {
+      this.config.locale = this.locale;
+    }
   }
 
   public configureOptions(): void {
