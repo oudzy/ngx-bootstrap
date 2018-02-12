@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "ngx-bootstrap"
+    "name": "@decerno/ngx-bootstrap"
   },
   "apps": [
     {

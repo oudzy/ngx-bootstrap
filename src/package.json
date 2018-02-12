@@ -1,5 +1,5 @@
 {
-  "name": "ngx-bootstrap",
+  "name": "@decerno/ngx-bootstrap",
   "peerDependencies": {
     "@angular/common": "*",
     "@angular/compiler": "*",

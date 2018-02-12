@@ -2,7 +2,7 @@
   "name": "@decerno/ngx-bootstrap-base",
   "version": "1.9.4",
   "description": "Native Angular Bootstrap Components",
-  "private": true,
+  "private": false,
   "scripts": {
     "lite-server": "lite-server -c scripts/bs-config.js",
     "typedoc": "typedoc --exclude '**/*.spec.ts' ./src/",
@@ -82,7 +82,7 @@
     "@angular/platform-browser-dynamic": "^2.4.4",
     "@angular/router": "^3.4.4",
     "@angular/tsc-wrapped": "0.5.1",
-    "@types/jasmine": "2.5.54",
+    "@types/jasmine": "^2.8.6",
     "@types/marked": "0.3.0",
     "@types/node": "8.0.25",
     "@types/webpack": "3.0.10",
